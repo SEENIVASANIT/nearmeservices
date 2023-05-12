@@ -1,0 +1,114 @@
+.area_about{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(22, 21, 21, 0.5);
+}
+.area_align_cen{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.area_about_card {
+    width: 500px;
+    text-align: center;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 5px 5px  10px black;
+    background: #ffffff;
+    overflow: hidden;
+  }
+  .area_about_card h2{
+    color: black;
+    margin-top: 1%;
+    font-family: monospace;
+    max-width: 480px;
+    margin-left: 1%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  
+  }
+  .area_about_card_image{
+    display: flex;
+  }
+  .area_about_card_image img{
+    width: 400px;
+    height:200px;
+    margin-top: 5%;
+    margin-left: 10%;
+    border: 2px solid black;
+    box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2);
+    filter: brightness(100%);
+
+  }
+  .area_info_box{
+    width: 500px;
+    height: 300px;
+    margin-top: 2%;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+  }
+  .other_deat{
+    width: 483px;
+    height:280px;
+    margin-left: 15px;
+    overflow: hidden;
+    overflow-y: scroll;
+    
+
+  }
+  .area_deat{
+    display: flex;
+    align-items: center;
+    text-align: center;  
+    padding: 5px;
+    animation: fadeIn 0.9s ease-in;
+  }
+  .area_deat h5{
+    color: black;
+    margin-top: -1.5%;
+    max-width: 340px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    animation: none;
+  }
+  .area_deat h3{
+    color: gray;
+  }
+  #colse_about{
+margin-left: 30px;
+margin-top: 2px;
+    font-size: 20px;
+  }
+  #colse_about:hover{
+color: red;
+  }
+  #about_area_location{
+    margin-top: -1%;
+  }
+  #about_area_location:hover{
+    text-decoration: underline;
+    color: rgb(110, 110, 241);
+  }
+  @media (max-width: 940px) {
+   .area_about_card{
+    width: 470px;
+   }
+   .area_about_card_image img{
+    margin-left: 7%;
+   } 
+   #colse_about{
+    margin-left: 17px;
+   }
+   .other_deat{
+    
+    width: 452px;
+   }
+  }

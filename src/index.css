@@ -1,0 +1,844 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.ui.dimmer {
+  background-color: rgb(0, 0, 0, 0.3) !important;
+
+  
+}
+
+/*----------------------------------------navibar------------------------------------------------*/
+nav {
+  height: 80px;
+  background-color: black;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px 0px 30px;
+}
+
+nav .logo {
+  font-size: 33px;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+#user_show_info{
+  font-size: 20px;
+  color: white;
+}
+#user_show_info:hover{
+  color: #c2afaf;
+  
+ 
+}
+nav ul {
+  display: flex;
+  list-style: none;
+
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  padding: 2px 7px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #1b1b1b;
+  background: #ffff;
+  padding: 10px;
+
+}
+
+
+nav #menu {
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.below_navi {
+
+  padding-top: 4%;
+  text-align: center;
+
+}
+
+section {
+  margin-top: 2%;
+  width: auto;
+  height: 85.5%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+/*------------------------------------------search_bar-------------------------------------*/
+
+.searchTerm {
+  width: 100px;
+  height: 26px;
+  font-size: 15px;
+  border: 3px solid #ffffff;
+  border-right: none;
+  padding: 4px;
+  border-radius: 5px 0 0 5px;
+  outline: #000000;
+  color: #000000;
+}
+
+#i {
+  color: #ffff;
+  align-items: center;
+  font-size: 17px;
+  color: #ffff;
+  padding: 1px;
+  margin-left: 5px;
+  display: none;
+
+
+}
+
+#i:hover {
+  color: rgb(121, 120, 120);
+  font-size: 20px;
+}
+
+
+
+.searchButton {
+  width: 40px;
+  height: 26px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.searchButton:hover {
+  color: white;
+}
+
+/*------------------------------------------------------*/
+
+/*--------------------------------------------------------------navi-end-------------------------------------------*/
+/*------------------------------------Home Page-----------------------------*/
+.bg-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-top: 2%;
+}
+
+.bg-image img {
+  height: 400px;
+  animation: fadeIn 1s ease-in;
+}
+
+#main_page_title {
+  text-align: center;
+  letter-spacing: 2px;
+  color: black;
+  font-weight: 900px;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 2px 2px #4e4a4a;
+  animation: fadeIn 1.4s ease-in;
+}
+
+h5 {
+  text-align: center;
+  margin-top: 25px;
+  font-family: cursive;
+  letter-spacing: 3px;
+  font-size: 10dp;
+  animation: fadeIn 1.7s ease-in;
+}
+
+.log-reg {
+  background-color: rgb(128, 197, 243);
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 10px 20px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  box-shadow: 5px 5px 10px  black;
+  margin-top: 2%;
+  align-self: center;
+  border-radius: 7px;
+  transition: 1s;
+  animation: fadeIn 2s ease-in;
+}
+
+.log-reg:hover {
+  background-color: bisque;
+  transition: 1ms;
+}
+
+#btt {
+  text-align: center;
+}
+
+/* -----------------------------end-----------------------------------------*/
+/*======================================card=================================*/
+section .card .image {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  padding: 3px;
+  margin-top: 0%;
+  background: #504b4b;
+}
+
+section .card .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid #ffff;
+  box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+section .card .image img:hover {
+  height: 159px;
+  width: 190px;
+  margin-left: -20%;
+  margin-top: -11%;
+  border-radius: 5%;
+  border: 3px solid rgb(0, 0, 0);
+  background: #ffff;
+
+
+
+}
+
+.card {
+  background: rgb(236, 214, 180);
+  border-radius: 20px;
+ 
+  width: 300px;
+  box-shadow: 5px 5px  10px black;
+  border: 1px solid rgb(0, 0, 0);
+  animation: fadeIn 1s ease-in;
+
+}
+
+
+
+.card .card-content {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.content {
+  margin-top: 5%;
+
+}
+
+#city_tamil {
+  text-align: center;
+  max-width: 290px;
+  font-size: 20px;
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+#city_english {
+  text-align: center;
+  margin-top: 4%;
+  max-width: 290px;
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+#map a {
+  color: rgb(247, 10, 10);
+}
+
+#map {
+  margin-top: -3%;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+
+#map a:hover {
+  color: rgb(25, 0, 255);
+}
+
+.card #card_bttn {
+  height: 35px;
+  width: 300px;
+  border-radius: 7px;
+  font-family: 'Times New Roman', Times, serif, monospace, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: rgb(236, 214, 180);
+  letter-spacing: 2px;
+  font-size: 20px;
+  padding-top: 5px;
+  color: #111;
+
+}
+
+.card #card_bttn:hover {
+  color: #ffff;
+  background: #111;
+  transition: 1s;
+  text-align: center;
+}
+
+#edit_icon {
+  margin-left: 60%;
+  color: black;
+  font-size: large;
+ 
+  font-weight: 900;
+  padding: 5px;
+
+}
+
+#delete_icon {
+  margin-left: 8%;
+  font-size: large;
+  color: black;
+
+  font-weight: 900;
+  padding: 5px;
+
+}
+
+.content1 {
+  padding: 26px;
+  text-align: center;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /*padding-left: 20%;*/
+
+}
+
+#delete_icon:hover{
+  color: red;
+  font-size: 20px;
+}
+#edit_icon:hover{
+  color: rgb(43, 255, 0);
+  font-size: 20px;
+}
+
+#area_page_heading {
+  text-align: center;
+  color: #1b1b1b;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.row {/*----------THIS CITY CARD-----------------*/
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  flex-flow: wrap;
+}
+
+.row2 {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  flex-flow: wrap;
+}
+
+/*--------------------------7.hosur-----------------------------------*/
+.row3 {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  flex-flow: wrap;
+}
+
+/*--------------------------10.kanchipuram-----------------------------------*/
+.row4 {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  flex-flow: wrap;
+}
+
+.row5 {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  flex-flow: wrap;
+}
+
+.row6 {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  flex-flow: wrap;
+}
+
+.row7 {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  flex-flow: wrap;
+}
+
+#city_page_heading {
+  text-align: center;
+  color: #1b1b1b;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#city_page_subtitle {
+  margin-top: 1%;
+  font-size: 25px;
+  font-family: cursive;
+  color: #504b4b;
+}
+
+#btten {
+
+  font-weight: 700;
+ 
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#btten:hover {
+  background-color: #ffff;
+  color: black;
+  transition: all 0.3s ease;
+  font-size: 13px;
+  
+
+}
+/*---------------------------------------CARD END------------------------------*/
+/*------------------------------Add_area_input_page-------------------------------*/
+.form {
+
+  background-color: #161616;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 500px;
+  padding: 20px;
+  width: 400px;
+  margin-top: 4%;
+}
+
+.title {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.subtitle {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.input-container1 {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.ic1 {
+  margin-top: 25px;
+}
+
+.ic2 {
+  margin-top: 30px;
+}
+
+.input {
+  background-color: #e0d2d2;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: black;
+  font-size: 18px;
+  height: 100%;
+
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.cut {
+  background-color: #161616;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 150px;
+}
+.cut1 {/*INPUT FOR  WORK TYPE*/
+  background-color: #161616;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 190px;
+}
+.input:focus~.cut1,
+.input:not(:placeholder-shown)~.cut1 {
+  transform: translateY(8px);
+}
+.cut-short {
+  width: 110px;
+}
+
+.input:focus~.cut,
+.input:not(:placeholder-shown)~.cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: #000000;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.input:focus~.placeholder,
+.input:not(:placeholder-shown)~.placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown)~.placeholder {
+  color: #ffffff;
+  letter-spacing: 3px;
+}
+
+.input:focus~.placeholder {
+  color: rgb(37, 145, 46);
+  letter-spacing: 3px;
+
+}
+
+#area_img_file {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 1px;
+
+
+}
+
+#file {
+  margin-top: 1%;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  border-radius: 20px;
+}
+
+
+#submit_btt_for_add_area {
+  margin-top: 7%;
+  font-size: large;
+  letter-spacing: 2px;
+}
+
+#group-in {
+  text-align: center;
+  margin-left: 35.9%;
+  margin-top: 2%;
+
+}
+
+/*------------------------------end-------------------------------*/
+/*----------------------------loader1-------------------------------*/
+.center {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+/*----------------------------Loader-end-------------------------------*/
+/*----------------------------------AREA NOT THERE--------------*/
+#area_not_there {
+  text-decoration: underline;
+}
+
+#area_not_there:hover {
+  color: red;
+}
+/*----------------------------------------------------------*/
+h6 {
+  text-align: center;
+  font-family:monospace;
+  letter-spacing: 1px;
+  margin-top: -5%;
+}
+
+/* ---------------------------------------------ALL (ADD BUTTON )--------------------DISABLEUSERS*/
+#invisable_fun{
+  display: none;
+}
+/*---------------------THIS IS MOBILE VIEW---------------------------------=======================================================================----*/
+@media (max-width:940px) {
+
+/*----------------------NAVI-BAR-MOBILE-VIEW------------------------------------*/
+  nav #menu {
+    display: block;
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 50px;
+    left: -100%;
+    background: rgb(68, 68, 68);
+    height: 100%;
+    width: 100%;
+    display: block;
+    transition: all .5s;
+  }
+
+  nav ul li {
+    margin: 40px;
+    text-align: center;
+    margin-top: 10%;
+  }
+
+  nav ul li a {
+    font-size: 25px;
+  }
+
+  nav ul li a:hover {
+    color: cyan;
+    background: none;
+  }
+
+  #check:checked~ul {
+
+    left: 0;
+  }
+
+
+  .below_navi {
+    margin-top: 10%;
+    text-align: center;
+
+  }
+  /*----------------------------------NAVI-BAR-END*/
+
+/*-------------------------MAIN-PAGE---------------------------------*/
+  .bg-image img {
+    background-image: url("../public/home_backgrount.jpeg");
+    min-height: 200px;
+    background-size: contain;
+    width: 470px;
+    height: 400px;
+    margin-top: 10%;
+  }
+
+  #main_page_title {
+    text-align: center;
+    letter-spacing: 2px;
+    color: black;
+    font-weight: 700px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px #4e4a4a;
+  }
+
+  h5 {
+    text-align: center;
+    margin-top: 25px;
+    font-family: cursive;
+    letter-spacing: 3px;
+  }
+  h4 {
+    text-align: center;
+    font-family:monospace;
+    letter-spacing: 2px;
+    margin-top: -5%;
+  }
+
+
+  .log-reg {
+    background-color: rgb(128, 197, 243);
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px 20px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-top: 2%;
+    align-self: center;
+    border-radius: 7px;
+    transition: 1s;
+  }
+
+/*----------------------------MAIN-END------------------------------*/
+
+/*------------------------CITY-PAGE----------------------------------*/
+  #city_page_heading {
+    text-align: center;
+    color: #1b1b1b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+
+/*---------------------------AREA-PAGE-------------------------------*/
+  .content1 {
+
+    margin-left: 16%;
+    text-align: center;
+
+
+  }
+  .card {
+    background: rgb(236, 214, 180);
+    border-radius: 20px;
+    height: 300px;
+    width: 300px;
+    border: 1px solid rgb(0, 0, 0);
+
+}
+  .card .card-content {
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.card .card-content h1{
+    font-size: 20px;
+    margin-top: 1%;
+}
+  .card #card_bttn {
+    height: 35px;
+    width: 300px;
+  
+    border-radius: 7px;
+    font-family: 'Times New Roman', Times, serif, monospace, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rgb(236, 214, 180);
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin-top: 1.8%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #111;
+  
+  }
+  
+
+  #delete_icon {
+
+    font-size: large;
+    color: black;
+    font-weight: 900;
+    display: none;
+
+
+  }
+
+  #edit_icon {
+    margin-left: -60%;
+    color: black;
+    font-size: large;
+    font-weight: 900;
+display: none;
+
+  }
+.containear{
+  padding: 5%;
+}
+#group-in {
+
+  margin-top: 7%;
+
+}
+  #btten {
+    margin-top: 2%;
+    
+
+  }
+
+  #btten:hover {
+    background-color: #ffff;
+    color: black;
+    font-size: 12px;
+  }
+
+  .form {
+    width: 350px;
+    margin-left: -30%;
+  }
+}

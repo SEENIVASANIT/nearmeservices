@@ -1,0 +1,219 @@
+#background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(22, 21, 21, 0.5);   
+}
+#align_form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.login_container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background:white;
+    box-shadow: 5px 7px  10px black;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.login_container .forms{
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    margin-top: -10%;
+    transition: height 0.2s ease;
+}
+
+
+.login_container .in_form{
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+}
+
+.login_container.active .login{
+    margin-left: -60%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.login_container .login{
+    margin-left: 2%;
+    padding-left: -6%;
+    
+}
+
+.login_container .signup{
+    opacity: 0;
+    margin-left: 10%;
+    margin-top: -2%;
+    transition: opacity 0.09s ease;
+}
+.login_container.active .signup{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.login_container.active .forms{
+    height: 550px;
+}
+.login_container .in_form .log_title{
+    position: relative;
+    font-size: 27px;
+    margin-left:-75%;
+    font-weight: 900;
+    animation: fadeIn 0.1s ease-in;
+}
+
+
+.in_form .log_input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-left: -50%;
+    margin-top: 30px;
+}
+
+.log_input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.log_input-field input:is(:focus, :valid){
+    border-bottom-color: #4070f4;
+}
+
+.log_input-field i{
+    position: absolute;
+    top: 50%;
+    margin-left: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.log_input-field input:is(:focus, :valid) ~ i{
+    color: #4070f4;
+}
+
+.log_input-field i.icon{
+    left: 0;
+}
+.log_input-field i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: -50%;
+}
+.log_input-field i.cshowHidePw{
+    right: 0;
+    cursor: pointer;
+    margin-right: -50%;
+    padding: 10px;
+}
+
+.in_form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    animation: fadeIn 0.7s ease-in;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+    animation: fadeIn 0.7s ease-in;
+}
+
+.checkbox-content input{
+    margin-right: 10px;
+    accent-color: #4070f4;
+    animation: fadeIn 0.7s ease-in;
+}
+
+.in_form .text{
+    color: #333;
+    font-size: 14px;
+    animation: fadeIn 0.7s ease-in;
+}
+
+.in_form a.text{
+    color: #4070f4;
+    text-decoration: none;
+    animation: fadeIn 0.7s ease-in;
+}
+.in_form a:hover{
+    text-decoration: underline;
+}
+
+#login_bttn{
+    width: 100%;
+    border-radius: 6px;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: 800;
+    font-family: monospace;
+    background: #000000;
+    margin-top: 35px;
+    animation: fadeIn 0.7s ease-in;
+    
+}
+#login_bttn:hover{
+    background: #302f2f;
+}
+
+.log_button Button:hover{
+    background-color: #1c1c1d;
+}
+
+.in_form .login-signup{
+    margin-top: 30px;
+    
+    text-align: center;
+}
+#close_form{
+    margin-left: 90%;
+    padding: 0;
+    margin-top: 1%;
+    font-size: 25px;
+}
+#close_form:hover{
+color: red;
+}
+
+#registration{
+    margin-left: -49.5%;
+}
+#close_sign{
+    margin-left: 100%;
+    padding: 0;
+    margin-top: 1px;
+    font-size: 25px;
+}
+#close_sign:hover{
+    color: red;
+}
+#setTime{
+display: none;
+}

@@ -1,0 +1,155 @@
+#forgot_con{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(22, 21, 21, 0.5);   
+}
+#forgot_align_cen{
+    position: fixed;
+    top: 50%;
+    left: 41%;
+    transform: translate(-50%, -50%);
+}
+
+
+.forgot_container{
+    width: 400px;
+    box-shadow: 5px 7px  10px black;
+    height: 300px;
+    background: #fff;
+    border-radius: 10px;
+    margin-left: 10%;
+    
+    
+}
+.forgot_input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+.forgot_input-field input{
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    margin-left: -35%;
+    padding: 0 35px;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: 16px;
+    background-color: rgb(223, 198, 198);
+}
+.forgot_input-field input:focus{
+    border: 2px solid rgb(233, 31, 31);
+    background-color: white;
+}
+
+.forgot_input-field i{
+    position: absolute;
+    top: 50%;
+    margin-left: -35%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    padding-left: 5px;
+    transition: all 0.2s ease;
+}
+
+.forgot_input-field input:is(:focus, :valid) ~ i{
+    color: #4070f4;
+}
+
+.forgot_input-field i.icon{
+    left: 0;
+}
+#show_pasw{
+    display: flex;
+    justify-content: center;
+    text-align: center;    
+    height: 50px;
+    width: 70%;
+    border-radius: 10px;
+    background-color: rgb(223, 198, 198);
+    margin-left: 15%;
+    margin-top: 10px;
+}
+#show_pasw{
+    align-items: center;
+    font-family: monospace;
+    font-weight: 800;
+    display: flex;
+    color: black;
+}
+#show_pasw h3{
+color:black;
+overflow:hidden;
+font-size: 15px;
+}
+#forgot_heading{
+    font-size: 25px;
+    padding: 5px;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+#see_pasw{
+    margin-top: 4%;
+}
+
+#capy_can_butt{
+    margin-top: 20px;
+}
+#butt_space{
+    padding: 20px;
+}
+@media (max-width:940px) {
+    #forgot_align_cen{
+        position: fixed;
+        top: 50%;
+        left: 41%;
+        transform: translate(-50%, -50%);
+    }
+    
+}
+/*----------------------------------------Verification page style--------------------------------------------*/
+.Verification_input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    
+
+}
+.Verification_input-field input{
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    margin-left: -35%;
+    padding: 0 35px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 5px 3px 20px 2px black;
+    font-size: 16px;
+    background-color: rgb(223, 198, 198);
+}
+.Verification_input-field input:focus{
+    border: 2px solid rgb(233, 31, 31);
+    background-color: white;
+}
+
+.Verification_input-field i{
+    position: absolute;
+    margin-left: -35%;
+    margin-top: 6%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    padding-left: 5px;
+    transition: all 0.2s ease;
+}
+
+.Verification_input-field input:is(:focus, :valid) ~ i{
+    color: #4070f4;
+}

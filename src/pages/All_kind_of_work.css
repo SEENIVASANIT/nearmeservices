@@ -1,0 +1,148 @@
+
+section .card1 .image {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    padding: 3px;
+    margin-top: 0%;
+    background: #504b4b;
+}
+
+section .card1 .image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid #ffff;
+
+}
+
+section .card1 .image img:hover {
+    height: 159px;
+    width: 190px;
+    margin-left: -20%;
+    margin-top: -11%;
+    border-radius: 5%;
+    border: 3px solid rgb(0, 0, 0);
+    background: #ffff;
+
+
+
+}
+/*<h5 id='bellow-english'>Hear you can find all kinds of<br/> professions.</h5>*/
+.card1 {
+    background: rgb(236, 214, 180);
+    border-radius: 20px;
+    
+    width: 300px;
+    box-shadow: 5px 5px  10px black;
+    border: 1px solid rgb(0, 0, 0);
+
+}
+
+
+
+.card1 .card-content {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.card1 #card_bttn {
+    height: 35px;
+    width: 300px;
+
+    border-radius: 7px;
+    font-family: 'Times New Roman', Times, serif, monospace, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rgb(236, 214, 180);
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #111;
+
+}
+
+.card1 #card_bttn:hover {
+    color: #ffff;
+    background: #111;
+    transition: 1s;
+    text-align: center;
+}
+
+#bellow-english {
+    font-size: 13px;
+    margin-top: -4%;
+    letter-spacing: 1px;
+    color: rgb(68, 67, 67);
+
+}
+#group-in1{
+   width: 100%;
+   top: 50%;
+   margin-top: 5%;
+   display: flex;
+   justify-content: center;
+    
+ }
+#eng{
+    display: block;
+    display:inline-flex;
+    max-width: 110px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+@media (max-width:940px) {
+    .content1 {
+        margin-left: 10%;
+
+    }
+
+    .card1 {
+        background: rgb(236, 214, 180);
+        border-radius: 20px;
+        height: 325px;
+        width: 300px;
+        border: 1px solid rgb(0, 0, 0);
+
+    }
+    .card1 .card-content {
+        padding: 7px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    .card1 .card-content h1{
+        font-size: 20px;
+        margin-top: 1%;
+    }
+    .card1 #card_bttn {
+        height: 35px;
+        width: 300px;
+        border-radius: 7px;
+        font-family: 'Times New Roman', Times, serif, monospace, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background: rgb(236, 214, 180);
+        letter-spacing: 2px;
+        font-size: 20px;
+        padding-top: 5px;
+        margin-top: 1.4%;
+        padding-bottom: 5px;
+        color: #111;
+    
+    }
+    #bellow-english {
+        font-size: 13px;
+        margin-top: 1%;
+        letter-spacing: 1px;
+        color: rgb(68, 67, 67);
+    
+    }
+    #group-in1{
+       margin-left: 25%;
+       top: 50%;
+       margin-top: 15%;
+    }
+}

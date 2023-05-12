@@ -1,0 +1,399 @@
+
+.worker_image{
+    height: 150px;
+    width: 150px;
+    padding: 3px;
+    border-radius: 50%;
+    background:#504b4b;
+    margin-left: 15%;
+    margin-top: 3%;
+  }
+  .worker_image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2);
+    border: 3px solid #ffff;
+  
+  }
+  .worker_image img:hover{
+    height: 159px;
+    width: 210px;
+    margin-left: -25%;
+    margin-top: -7%;
+    border-radius: 5%;
+    border: 3px solid rgb(255, 255, 255);
+    background: #ffff;
+  }
+  #area_page_heading_sub_heading{
+    
+    text-align: center;
+    margin-top: 1px;
+    font-family: cursive;
+    letter-spacing: 3px;
+  }
+  .course {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      max-width: 100%;
+      margin: 20px;
+      box-shadow: 5px 5px  10px black;
+      overflow: hidden;
+      width: 1000px;
+      border: 3px solid rgb(0, 0, 0);
+  }
+  
+  .course #h6 {
+      opacity: 0.6;
+      font-size: 29px;
+      
+  }
+  #w_place{
+    color: black;    
+  }
+  
+  #w_place:hover{
+  text-decoration: underline;
+  color: #8c84f7;    
+  }
+  .course #h62 {
+    opacity: 0.6;
+    
+    font-size: 29px;
+    
+}
+.course #h63 {
+    opacity: 0.6;
+    font-size: 29px;
+}
+  
+  .course h2 {
+      letter-spacing: 1px;   
+    position:absolute;
+    color: black;
+    font-size: 17px;
+    padding: 1.7px;
+    max-width: 600px;
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+
+  }
+  
+  #w_name{
+   margin-left: -2%;
+    font-size: 25px;
+    margin-top: -4%;
+    max-width: 600px;
+    
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+   
+
+    
+    
+  }
+  .br{
+    display: none;
+  }
+  .course-preview {
+      background-color: #2A265F;
+      width: 345px;
+    height: 210.5px;
+    padding: 2.6%;
+  }
+  .course-info {
+      padding: 30px;
+      position: relative;
+      width: 100%;
+  }
+  .progress-container {
+      position: absolute;
+      top: 25px;
+      
+      right: 3px;
+      justify-content: center;
+      width: 130px;
+  }
+  
+  #con{
+    width: 100%;
+    display: flex;
+	align-items: center;
+  padding: 10px;
+	justify-content: center;
+  }
+  .progress-text {
+      font-size: 13px;
+  color: black;
+      letter-spacing: 1px;
+  }
+  #pin{
+   font-size: 20px;
+   margin-left: 75%;
+  }
+  #pin:hover{
+    color:gray;
+    
+  }
+  #pin:checked{
+color: green;
+  }
+  .btn {
+      background-color: #2A265F;
+      border: 0;
+      border-radius: 5px;
+      box-shadow: 0 10px 10px rgba(250, 0, 0, 0.2);
+      color: #fff;
+      font-size: 16px;
+      padding: 12px 25px;
+      position: absolute;
+      bottom: 10px;
+      font-weight: bold;
+      right: 20px;
+      letter-spacing: 1px;
+  }
+  .btn_call {
+      background-color: #2A265F;
+      border: 0;
+      border-radius: 5px;
+      box-shadow: 0 10px 10px rgba(250, 0, 0, 0.2);
+      color: #fff;
+      font-size: 16px;
+      padding: 12px 25px;
+      position: absolute;
+      bottom: 10px;
+      font-weight: bold;
+      margin-left: 12%;
+      letter-spacing: 1px;
+  }
+  .btn_call:hover{
+    background-color:rgb(0, 0, 0) ;
+    transition: 1s;
+   
+  }
+  .btn:hover{
+    background-color:rgb(0, 0, 0) ;
+    transition: 1s;
+   
+  }
+  #span1{
+    color: orange;
+  }
+  #star{
+    color: orange;
+  }
+#edit_icon_for_worker {
+  margin-top: -15%;
+  
+  color: black;
+  
+  font-size: large;
+ margin-left: -1%;
+  font-weight: 900;
+  
+}
+
+#delete_icon_for_worker{
+  margin-top: -8%;
+  color: black;
+  font-size: large;
+  font-weight: 900;
+  margin-left: -1.5%;
+  
+}
+#edit_icon_for_worker:hover{
+  color: rgb(0, 255, 0);
+  font-size: 22px;
+  
+}
+#delete_icon_for_worker:hover{
+  color: red;
+  font-size: 22px;
+
+}
+#total_count_star{
+  font-size: 10px;
+  font-weight: 600;
+  color: black;
+}
+  @media screen and (max-width: 940px) {
+
+	.social-panel-container.visible {
+		transform: translateX(0px);
+	}
+	
+	.floating-btn {
+		right: 10px;
+	}
+	.worker_image{
+		height: 120px;
+		width: 120px;
+		padding: 1px;
+		border-radius: 50%;
+		background:#504b4b;
+		margin-top: 13%;
+		margin-left: -1%;
+	  }
+	  .worker_image img{
+		height: 100%;
+		width: 100%;
+		border-radius: 50%;
+		border: 3px solid #ffff;
+	  
+	  }
+	  .worker_image img:hover{
+		height: 119px;
+		width: 130px;
+		margin-top: 0%;
+		margin-left: -4%;
+		border-radius: 5%;
+		border: 3px solid rgb(255, 255, 255);
+		background: #ffff;
+	  }
+	  .course {
+		  background-color: #fff;
+		  border-radius: 10px;
+		  box-shadow: 5px 5px  10px black;
+		  max-width: 100%;
+		  overflow: hidden;
+		  width: 450px;
+	  }
+	  
+	  
+	  .course #h6 {
+		  opacity: 0.6;
+		  font-size: 17px;
+		  letter-spacing: 1px;
+		margin-left: -1%;
+		padding: 2x ;
+	  }
+	  
+    
+	  #br{
+      display: block;
+    }
+    
+	  
+	  .course h2 {
+		  letter-spacing: 1px;
+		  margin: 1px 0;
+		  font-size: 10px;
+      position: absolute;
+      font-weight: bold;
+margin-top: -7%;
+        color: rgb(0, 0, 0);
+        max-width: 260px;
+  overflow: hidden;
+    text-overflow: ellipsis;
+
+		
+	  }
+	  h1{
+		font-size:13px;
+	  }
+	  #w_name{
+		
+		 font-size: 17px;
+		 margin-top: -12%;
+     padding: 10px;
+     max-width: 200px;
+		 
+	   }
+	  .course-preview {
+		  background-color: #2A265F;
+		  width: 205px;
+		height: 170px;
+		padding: 2.6%;
+	   
+	  
+	  }
+	  .progress-container {
+		margin-right: -7.5%;
+    padding: 6%;
+    margin-top: -6%;
+    overflow: hidden;
+	}
+	  .progress-text {
+		  font-size: 10px;
+	  color: black;
+      font-family: 'Arial Narrow Bold';
+      font-weight: bold;
+		  letter-spacing: 1px;
+	  }
+    
+	 
+	  .btn {
+		  background-color: #2A265F;
+		  border: 0;
+		  
+		  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+		  color: #fff;
+		  font-size: 13px;
+		  padding: 5px 10px;
+		  position: absolute;
+		  bottom: 10px;
+		  right: 20px;
+		  letter-spacing: 1px;
+	  }
+      .btn_call {
+        background-color: #2A265F;
+        border: 0;
+        border-radius: 5px;
+        box-shadow: 0 10px 10px rgba(250, 0, 0, 0.2);
+        color: #fff;
+        font-size: 13px;
+        padding: 5px 10px;
+      
+        bottom: 10px;
+        margin-left: -7%;
+        letter-spacing: 1px;
+    }
+    .br{
+      display: block;
+    }
+    #edit_icon_for_worker {
+      margin-top: -44%;
+      
+      color: black;
+    
+      font-size: large;
+     margin-left: -15.5%;
+      font-weight: 900;
+      display: flex;
+      
+    }
+    
+    #delete_icon_for_worker{
+      margin-top: -44%;
+      color: black;
+      font-size: large;
+      font-weight: 900;
+      margin-left: 3.5%;
+      
+      
+    }
+
+    #br_for_star{
+      display: none;
+    }
+    #w_dob{
+      font-size: 13px;
+      
+    }
+    #align{
+      margin-left: -10%;
+    }
+    #total_count_star{
+      font-size: 8px;
+    }
+    .proggress-text{
+      font-size: 12px;
+      margin-left: -30%;
+    }
+}

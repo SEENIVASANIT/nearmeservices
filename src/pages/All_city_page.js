@@ -123,9 +123,9 @@ const All_city_page = () => {
 
       <div className="below_navi">
         <h1 id="city_page_heading">
-          WELCOME TO OUR WEBSITE, {user_name.toLocaleUpperCase()}
+          WELCOME TO NEARME SERVICES WEBSITE, {user_name.toLocaleUpperCase()}
         </h1>
-        <h3 id="city_page_subtitle">Find your city.</h3>
+        <h3 id="city_page_subtitle">Select your city.</h3>
       </div>
       <div className="row">
         <div className="containear">

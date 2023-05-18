@@ -261,7 +261,7 @@ const Admin_home = () => {
       ></img>
       <h1>{collection_value}</h1>
       <Container>
-        <h1 id="area_page_heading">Find your nearby areas!</h1>
+        <h1 id="area_page_heading">Select your area!</h1>
         <Grid columns={3} stackable>
           {users.map((item) => {
             return (

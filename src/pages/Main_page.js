@@ -10,6 +10,11 @@ const Main_page = () => {
   if (localStorage.getItem("current_user")) {
     localStorage.removeItem("current_user");
   }
+
+  if (localStorage.getItem("Access_id")) {
+    localStorage.removeItem("Access_id");
+  }
+
   // const navigate = useNavigate();
 
   // const navigate_City_page = () => {
@@ -42,10 +47,10 @@ const Main_page = () => {
       <div className="bg-image">
         <img src={bg_image} />
       </div>
-      <h1 id="main_page_title">FIND YOUR SMALL NEED!!!</h1>
+      <h1 id="main_page_title">FIND YOUR NEARBY SERVICES!!!</h1>
       <h5>
-        This website helps find your all kinds of professions in your near by
-        areas finding easy.
+        This website help to find all kinds of professions in your near by areas
+        finding easy.
       </h5>
       <div id="btt">
         <button className="log-reg" onClick={() => handleModal()}>

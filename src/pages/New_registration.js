@@ -479,7 +479,7 @@ const New_registration = () => {
                   ></textarea>
                 </div>
                 <div class="worker_input_form_inputfield">
-                  <label>CURRENT LOCATION*</label>
+                  <label>HOME LOCATION*</label>
                   <input
                     type="text"
                     placeholder="Enter a current location."

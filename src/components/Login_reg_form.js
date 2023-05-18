@@ -69,7 +69,7 @@ const Login_reg_form = ({ setOpen }) => {
   const handleSubmit = async (e) => {
     //SUBMIT THE ALL DATA
     e.preventDefault();
-    users.map(async (item) => {
+    var check_sigunup = users.map(async (item) => {
       if (
         item.user_email == document.getElementById("user_input_email").value
       ) {
@@ -108,17 +108,6 @@ const Login_reg_form = ({ setOpen }) => {
         const user_info = { ...data };
         localStorage.setItem(user_email, JSON.stringify(user_info));
         const container = document.querySelector(".login_container");
-        await toast.success(`Successfully register`, {
-          position: "top-center",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        });
-
         container.classList.remove("active");
         document.getElementById("user_input").value = "";
         document.getElementById("user_input_email").value = "";
@@ -126,12 +115,24 @@ const Login_reg_form = ({ setOpen }) => {
         document.getElementById("conform_pas").value = "";
       }
     });
+    if (check_sigunup) {
+      await toast.success(`Successfully register`, {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    }
   };
 
   const handleLogin = async () => {
     //SUBMIT THE ALL DATA
     var counts = 0;
-    users.map((item) => {
+    const check_login = users.map((item) => {
       if (
         item.user_email === login_user_email &&
         item.user_passw === login_user_passw
@@ -145,7 +146,7 @@ const Login_reg_form = ({ setOpen }) => {
           } catch (e) {}
         }
         if (item.Have_id != false) {
-          localStorage.setItem("Access_id" + login_user_email, item.Have_id);
+          localStorage.setItem("Access_id", item.Have_id);
         }
 
         var temp_store = localStorage.getItem(login_user_email);
@@ -176,81 +177,20 @@ const Login_reg_form = ({ setOpen }) => {
 
         counts = 1;
       } else {
-        if (counts != 1) {
-          toast.error(`invalied username or passwored!`, {
-            position: "top-center",
-            autoClose: 1000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-          });
-        }
       }
     });
-
-    //         if(localStorage.getItem(login_user_email)){
-    //             var temp_store=localStorage.getItem(login_user_email)
-    //             var pass_val=JSON.parse(temp_store);
-    //              if(pass_val.user_passw!==login_user_passw){
-    //                 toast.error(`Invalide password!`, {
-    //                     position: "top-center",
-    //                     autoClose: 1000,
-    //                     hideProgressBar: false,
-    //                     closeOnClick: true,
-    //                     pauseOnHover: true,
-    //                     draggable: true,
-    //                     progress: undefined,
-    //                     theme: "colored",
-    //                   });
-    //             }else{
-    //                 const Remember={...login_data}
-    //             if(document.getElementById('logCheck').checked){
-    //                 localStorage.setItem('remember',JSON.stringify(Remember))
-    //             }else{
-    //                 try{
-    //                     localStorage.removeItem('remember')
-    //                 }catch(e){
-
-    //                 }
-    //             }
-
-    //                 var temp_store=localStorage.getItem(login_user_email)
-    //                 var pass_val=JSON.parse(temp_store);
-    //        await toast.success(`Welcome ${pass_val.user_name}`, {
-    //             position: "top-center",
-    //             autoClose: 1000,
-    //             hideProgressBar: false,
-    //             closeOnClick: true,
-    //             pauseOnHover: true,
-    //             draggable: true,
-    //             progress: undefined,
-    //             theme: "colored",
-    //           });
-
-    //                 const current_user_name=pass_val.user_name
-    //           const current_user={...login_data,current_user_name}
-    //           localStorage.setItem('current_user',JSON.stringify(current_user))
-    // if(login_user_email==='20110090@hicet.ac.in' && login_user_passw==='26@#seeni'){
-    //     navigate('/admin_all_city')
-    // }else{
-    //                 //localStorage.setItem('current_user',current_user)
-    //     navigate('/all_city')}
-    //             }
-    //         }else{
-    //             toast.error(`Please sign up your account!`, {
-    //                 position: "top-center",
-    //                 autoClose: 1000,
-    //                 hideProgressBar: false,
-    //                 closeOnClick: true,
-    //                 pauseOnHover: true,
-    //                 draggable: true,
-    //                 progress: undefined,
-    //                 theme: "colored",
-    //               });
-    //         }
+    if (check_login) {
+      toast.error(`invalied username or passwored!`, {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    }
   };
 
   const call_design = () => {

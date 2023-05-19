@@ -17,10 +17,15 @@ import {
 } from "firebase/firestore";
 import { async } from "@firebase/util";
 import emailjs from "@emailjs/browser";
+var temp_store = localStorage.getItem("current_user");
+var pass_val = JSON.parse(temp_store);
 const initialState = {
   w_name: "",
   w_Gender: "",
-  w_email: "",
+  w_email:
+    pass_val.login_user_email !== "20110090@hicet.ac.in"
+      ? pass_val.login_user_email
+      : "",
   w_phone: "",
   Professions: "",
   City_name: "",
@@ -372,6 +377,7 @@ const New_registration = () => {
                   <input
                     type="email"
                     name="w_email"
+                    id="defult_email"
                     placeholder="enter a email."
                     required
                     class="input"

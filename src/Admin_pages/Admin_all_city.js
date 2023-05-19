@@ -74,7 +74,7 @@ const Admin_all_city = () => {
   return (
     <div>
       <nav>
-        <div className="logo">Find need</div>
+        <div className="logo">NearMe Services!</div>
         <input type="checkbox" id="check" />
         <label htmlFor="check" id="menu">
           <i className="fas fa-bars"></i>

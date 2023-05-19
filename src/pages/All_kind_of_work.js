@@ -248,6 +248,9 @@ const All_Kind_of_work = () => {
         </label>
         <ul>
           <li>
+            <a href="/all_city">Back</a>
+          </li>
+          <li>
             <a
               id="my_area"
               title="You can choose only one location!"

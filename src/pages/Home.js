@@ -196,6 +196,9 @@ const Home = () => {
         </label>
         <ul>
           <li>
+            <a href="/all_city">Back</a>
+          </li>
+          <li>
             <a
               id="my_area"
               title="First you want to select your area. before that you click to go your area!"

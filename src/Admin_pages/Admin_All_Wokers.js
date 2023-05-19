@@ -64,24 +64,24 @@ const Admin_All_worker = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   // var city_img=useParams();////OTHER TYPE FOR GET VALUE FOR PREVASE PAGE!
-  const check_login = () => {
-    if (!localStorage.getItem("current_user")) {
-      navigate("/");
-    } else {
-      var temp_store = localStorage.getItem("current_user");
-      var pass_val = JSON.parse(temp_store);
+  // const check_login = () => {
+  //   if (!localStorage.getItem("current_user")) {
+  //     navigate("/");
+  //   } else {
+  //     var temp_store = localStorage.getItem("current_user");
+  //     var pass_val = JSON.parse(temp_store);
 
-      if (
-        pass_val.login_user_email === "20110090@hicet.ac.in" &&
-        pass_val.login_user_passw === "26@#seeni"
-      ) {
-        document.getElementById("btten").style.display = "block";
-        document.getElementById("edit_icon").style.display = "inline-flex";
-        document.getElementById("delete_icon").style.display = "inline-flex";
-        //document.getElementsByClassName('didable_e_d').style.display='block';
-      }
-    }
-  };
+  //     if (
+  //       pass_val.login_user_email === "20110090@hicet.ac.in" &&
+  //       pass_val.login_user_passw === "26@#seeni"
+  //     ) {
+  //       document.getElementById("btten").style.display = "block";
+  //       document.getElementById("edit_icon").style.display = "inline-flex";
+  //       document.getElementById("delete_icon").style.display = "inline-flex";
+  //       //document.getElementsByClassName('didable_e_d').style.display='block';
+  //     }
+  //   }
+  // };
 
   useEffect(() => {
     //THIS FUNCTION LOAD DATA FOR THIS PAGE
@@ -427,7 +427,7 @@ const Admin_All_worker = () => {
           </a>
         </h1>
       </Container>
-      <p id="invisable_fun">{setTimeout(check_login)}</p>
+      <p id="invisable_fun">{/*setTimeout(check_login)*/}</p>
       <ToastContainer />
     </div>
   );

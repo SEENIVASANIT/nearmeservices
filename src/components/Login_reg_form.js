@@ -69,11 +69,12 @@ const Login_reg_form = ({ setOpen }) => {
   const handleSubmit = async (e) => {
     //SUBMIT THE ALL DATA
     e.preventDefault();
-    var check_sigunup = users.map(async (item) => {
-      if (
-        item.user_email == document.getElementById("user_input_email").value
-      ) {
-        toast.error(`Already register this mail id`, {
+    const user_datas = new FormData(e.target);
+    let check_mail = true;
+    await users.map(async (item) => {
+      if (item.user_email == user_datas.get("login_user_email")) {
+        check_mail = false;
+        toast.error(`Already use this mail id.`, {
           position: "top-center",
           autoClose: 3000,
           hideProgressBar: false,
@@ -83,39 +84,38 @@ const Login_reg_form = ({ setOpen }) => {
           progress: undefined,
           theme: "colored",
         });
-      } else {
-        try {
-          //ADD DADA UPLOAD TO COLLECTION FIREBASE
-          /// *THIS COLLECTION IN CHANGE FOR CITYS* /////////////////////
-
-          await addDoc(collection(db, "login_user"), {
-            ...data,
-            Have_id: false,
-            timstamp: serverTimestamp(),
-          });
-        } catch (error) {
-          toast.error("Some network error so tryagain!!!", {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-          });
-        }
-        const user_info = { ...data };
-        localStorage.setItem(user_email, JSON.stringify(user_info));
-        const container = document.querySelector(".login_container");
-        container.classList.remove("active");
-        document.getElementById("user_input").value = "";
-        document.getElementById("user_input_email").value = "";
-        document.getElementById("user_input_passw").value = "";
-        document.getElementById("conform_pas").value = "";
       }
     });
-    if (check_sigunup) {
+    if (check_mail) {
+      try {
+        //ADD DADA UPLOAD TO COLLECTION FIREBASE
+        /// *THIS COLLECTION IN CHANGE FOR CITYS* /////////////////////
+
+        await addDoc(collection(db, "login_user"), {
+          ...data,
+          Have_id: false,
+          timstamp: serverTimestamp(),
+        });
+      } catch (error) {
+        toast.error("Some network error so tryagain!!!", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      }
+      const user_info = { ...data };
+      localStorage.setItem(user_email, JSON.stringify(user_info));
+      const container = document.querySelector(".login_container");
+      container.classList.remove("active");
+      document.getElementById("user_input").value = "";
+      document.getElementById("user_input_email").value = "";
+      document.getElementById("user_input_passw").value = "";
+      document.getElementById("conform_pas").value = "";
       await toast.success(`Successfully register`, {
         position: "top-center",
         autoClose: 3000,
@@ -129,14 +129,18 @@ const Login_reg_form = ({ setOpen }) => {
     }
   };
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
     //SUBMIT THE ALL DATA
-    var counts = 0;
-    const check_login = users.map((item) => {
+    e.preventDefault();
+    let check_mail = true;
+    await users.map((item) => {
+      const user_datas = new FormData(e.target);
+
       if (
-        item.user_email === login_user_email &&
-        item.user_passw === login_user_passw
+        item.user_email === user_datas.get("login_user_email") &&
+        item.user_passw === user_datas.get("login_user_passw")
       ) {
+        check_mail = false;
         const Remember = { ...login_data };
         if (document.getElementById("logCheck").checked) {
           localStorage.setItem("remember", JSON.stringify(Remember));
@@ -174,12 +178,9 @@ const Login_reg_form = ({ setOpen }) => {
           //localStorage.setItem('current_user',current_user)
           navigate("/all_city");
         }
-
-        counts = 1;
-      } else {
       }
     });
-    if (check_login) {
+    if (check_mail) {
       toast.error(`invalied username or passwored!`, {
         position: "top-center",
         autoClose: 1000,
@@ -298,72 +299,69 @@ const Login_reg_form = ({ setOpen }) => {
                 closeForm();
               }}
             ></i>
-
             <div class="forms">
               <div class="in_form login">
-                <span class="log_title">Login</span>
+                <form onSubmit={handleLogin}>
+                  <span class="log_title">Login</span>
 
-                <div class="log_input-field">
-                  <input
-                    type="email"
-                    id="login_email"
-                    placeholder="Enter your email"
-                    name="login_user_email"
-                    required
-                    onChange={handleChange_login}
-                  />
-                  <i class="uil uil-envelope icon"></i>
-                </div>
-
-                <div class="log_input-field">
-                  <input
-                    type="password"
-                    class="password"
-                    id="login_pasw"
-                    placeholder="Enter your password"
-                    name="login_user_passw"
-                    required
-                    onChange={handleChange_login}
-                  />
-                  <i class="uil uil-lock icon"></i>
-                  <i
-                    class="uil uil-eye-slash showHidePw"
-                    onClick={() => call_design()}
-                  ></i>
-                </div>
-
-                <div class="checkbox-text">
-                  <div class="checkbox-content">
-                    <input type="checkbox" id="logCheck" />
-                    <label for="logCheck" class="text">
-                      Remember me
-                    </label>
+                  <div class="log_input-field">
+                    <input
+                      type="email"
+                      id="login_email"
+                      placeholder="Enter your email"
+                      name="login_user_email"
+                      required
+                      onChange={handleChange_login}
+                    />
+                    <i class="uil uil-envelope icon"></i>
                   </div>
 
-                  <a href="javascript:" class="text forgot-link">
-                    Forgot password?
-                  </a>
-                  {Open_forgot && (
-                    <Forgot_pasw setOpen_forgot={setOpen_forgot} />
-                  )}
-                </div>
+                  <div class="log_input-field">
+                    <input
+                      type="password"
+                      class="password"
+                      id="login_pasw"
+                      placeholder="Enter your password"
+                      name="login_user_passw"
+                      required
+                      onChange={handleChange_login}
+                    />
+                    <i class="uil uil-lock icon"></i>
+                    <i
+                      class="uil uil-eye-slash showHidePw"
+                      onClick={() => call_design()}
+                    ></i>
+                  </div>
 
-                <Button
-                  type="submit"
-                  id="login_bttn"
-                  onClick={() => handleLogin()}
-                >
-                  Login
-                </Button>
+                  <div class="checkbox-text">
+                    <div class="checkbox-content">
+                      <input type="checkbox" id="logCheck" />
+                      <label for="logCheck" class="text">
+                        Remember me
+                      </label>
+                    </div>
 
-                <div class="login-signup">
-                  <span class="text">
-                    Not have a account?
-                    <a href="#" class="text signup-link">
-                      Signup Now
+                    <a href="javascript:" class="text forgot-link">
+                      Forgot password?
                     </a>
-                  </span>
-                </div>
+                    {Open_forgot && (
+                      <Forgot_pasw setOpen_forgot={setOpen_forgot} />
+                    )}
+                  </div>
+
+                  <Button type="submit" id="login_bttn">
+                    Login
+                  </Button>
+
+                  <div class="login-signup">
+                    <span class="text">
+                      Not have a account?
+                      <a href="#" class="text signup-link">
+                        Signup Now
+                      </a>
+                    </span>
+                  </div>
+                </form>
               </div>
               <div class="in_form signup">
                 <i
